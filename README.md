@@ -5,7 +5,7 @@
 ひとまず、自分のみ
 
 # 開発環境
-python3.10.10, tkinter, PostgreSQLとpgvector, VsCode
+python3.10.10, tkinter, PostgreSQLとpgvector, VsCode, pyenv+venv
 
 # UI
 デスクトップマスコット（本型）をデスクトップに設置し、それにアクセスすることで各メニューを呼び出す。
