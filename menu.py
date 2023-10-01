@@ -1,7 +1,8 @@
 import tkinter as tk
+from chat_window import ChatWindow
 
 class SubMenu:
-    def __init__(self, root):
+    def __init__(self, root, cw):
         # メニューウィンドウの作成
         self.menu_window = tk.Menu(root, tearoff=0)
 
@@ -12,6 +13,7 @@ class SubMenu:
         self.menu_window.add_command(label="Exit", command=root.quit)
         
         self.main = root
+        self.chat_window = cw
 
     # メニュー1のコマンド
     def menu1_command(self):
@@ -22,3 +24,5 @@ class SubMenu:
     # メニュー2のコマンド
     def menu2_command(self):
         print("チャット")
+        if self.chat_window is None:
+            self.chat_window = ChatWindow(self.main)

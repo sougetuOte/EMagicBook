@@ -46,9 +46,9 @@ class TransparentWindow:
         # メニューウィンドウの作成
         self.menu = None
         
-#        print("window_size:" + str(self.window_size))
-#        print("window_position:" + str(self.window_position))
-
+        # チャットウィンドーの作成
+        self.chat_window = None
+        
 
     def init_canvas(self, frame, image):
         # キャンバスの作成
@@ -94,7 +94,7 @@ class TransparentWindow:
         print("click:(x:" + str(event.x) + ",y=" + str(event.y) + ")")
         #メニューウィンドーの表示
         if self.menu is None:
-            self.menu = SubMenu(self.main)
+            self.menu = SubMenu(self.main, self.chat_window)
         # menu表示
         self.menu.menu_window.post(event.x_root, event.y_root)  
 
