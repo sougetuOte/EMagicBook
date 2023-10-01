@@ -107,7 +107,7 @@ if __name__ == "__main__":
     image = Image.open("images/closedbook000.png")
     
     # サイズ調整　縦が200を超えたら、200に縮小、横は縦の比率で縮小
-    MAX_IMAGE_HEIGHT = 200
+    MAX_IMAGE_HEIGHT = 150
     if image.height > MAX_IMAGE_HEIGHT:
         image = image.resize(
             (int(image.width * (MAX_IMAGE_HEIGHT / image.height)),
@@ -115,8 +115,10 @@ if __name__ == "__main__":
             Image.HAMMING)
     
     # Create a transparent window with the given image
-    window_position = (main.winfo_screenwidth() - image.width - 100 , main.winfo_screenheight() - image.height - 50) 
+    window_position = (main.winfo_screenwidth() - image.width - 30 , main.winfo_screenheight() - image.height - 50) 
     TransparentWindow(main, image, position=window_position, size=(image.width, image.height))
+    print("window_position:" + str(window_position))
+    print("image.size:" + str(image.size))
 
     # Run the application
     main.mainloop()
