@@ -5,7 +5,7 @@ from menu import SubMenu
 
 class TransparentWindow:
     FRAME_OFFSET = -2
-    BG_COLOR = "white"
+    BG_COLOR = "black"
 
     def __init__(self, main, image, position=(0,0), size=(0,0)):
         # Window作成
@@ -91,7 +91,7 @@ class TransparentWindow:
 
     # 右クリックイベント
     def click_canvas_event(self, event):
-        print("click:(x:" + str(event.x) + ",y=" + str(event.y) + ")")
+#        print("click:(x:" + str(event.x) + ",y=" + str(event.y) + ")")
         #メニューウィンドーの表示
         if self.menu is None:
             self.menu = SubMenu(self.main, self.chat_window)

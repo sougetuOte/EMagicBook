@@ -19,7 +19,7 @@ class SubMenu:
     def menu1_command(self):
         print("日記")
         # 親ウィンドーを非表示にする
-        self.main.withdraw()
+        #self.main.withdraw()
 
     # メニュー2のコマンド
     def menu2_command(self):
