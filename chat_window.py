@@ -69,7 +69,7 @@ class ChatWindow(tk.Toplevel):
     
     def create_command_button(self):
         self.command_button = tk.Button(self, text="Enter", command=self.send_message)
-        self.command_button.place(x=580, y=750, width=80, height=30)
+        self.command_button.place(x=600, y=750, width=70, height=30)
 
     def create_close_button(self):
         self.close_button = tk.Button(self, text="x", command=self.close_window)
